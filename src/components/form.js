@@ -31,7 +31,7 @@ const Form = () => {
                 ¿Quieres Cotizar con nosotros?
               </h4>
               <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                Completa este formulario y te responderemos en 24 horas.
+                Completa el formulario y te responderemos en 24 horas.
               </p>
               <div className="relative w-full mb-3 mt-8">
                 <label
