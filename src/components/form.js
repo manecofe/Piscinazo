@@ -1,6 +1,7 @@
 import { useState } from "react";
-
+import { useTranslation } from "react-i18next";
 const Form = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -28,22 +29,22 @@ const Form = () => {
           <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
             <div className="flex-auto p-5 lg:p-10 text-center">
               <h4 className="text-2xl font-semibold">
-                ¿Quieres Cotizar con nosotros?
+                {t("Want to Get a Quote with Us?")}
               </h4>
               <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                Completa el formulario y te responderemos en 24 horas.
+                {t("Complete the form and we'll respond within 24 hours.")}
               </p>
               <div className="relative w-full mb-3 mt-8">
                 <label
                   className="block uppercase text-gray-700 text-xs font-bold mb-2"
                   htmlFor="full-name"
                 >
-                  Nombre completo
+                  {t("Full Name")}
                 </label>
                 <input
                   type="text"
                   className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                  placeholder="Nombre completo"
+                  placeholder={t("Full Name")}
                   onChange={handleInputChange}
                   value={formData.nombre}
                   style={{ transition: "all .15s ease" }}
@@ -55,12 +56,12 @@ const Form = () => {
                   className="block uppercase text-gray-700 text-xs font-bold mb-2"
                   htmlFor="email"
                 >
-                  Correo electrónico
+                  {t("Email Address")}
                 </label>
                 <input
                   type="email"
                   className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                  placeholder="Correo electrónico"
+                  placeholder={t("Email Address")}
                   onChange={handleInputChange}
                   value={formData.email}
                   style={{ transition: "all .15s ease" }}
@@ -72,7 +73,7 @@ const Form = () => {
                   className="block uppercase text-gray-700 text-xs font-bold mb-2"
                   htmlFor="message"
                 >
-                  Mensaje
+                  {t("Message")}
                 </label>
                 <textarea
                   rows="4"
@@ -80,7 +81,7 @@ const Form = () => {
                   onChange={handleInputChange}
                   value={formData.mensaje}
                   className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                  placeholder="Escribe un mensaje..."
+                  placeholder={t("Write a message...")}
                 />
               </div>
               <div className="text-center mt-6">
@@ -90,7 +91,7 @@ const Form = () => {
                   type="button"
                   style={{ transition: "all .15s ease" }}
                 >
-                  Enviar Mensaje
+                  {t("Send Message")}
                 </button>
               </div>
             </div>

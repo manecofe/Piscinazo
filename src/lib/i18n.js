@@ -43,6 +43,18 @@ const resources = {
       "Launch Time": "Launch Time",
       "Some quick examples to build the card title and make up the bulk of the card's content.":
         "Some quick examples to build the card title and make up the bulk of the card's content.",
+      "Want to Get a Quote with Us?": "Want to Get a Quote with Us?",
+      "Complete the form and we'll respond within 24 hours.":
+        "Complete the form and we'll respond within 24 hours.",
+      "Full Name": "Full Name",
+      "Email Address": "Email Address",
+      Message: "Message",
+      "Write a message...": "Write a message...",
+      "Send Message": "Send Message",
+      "Your story begins with us.": "Your story begins with us.",
+      "Imagine your home with a customized pool, designed to fit your lifestyle. At our pool construction company, we specialize in turning your dreams of relaxation and entertainment into a refreshing reality.":
+        "Imagine your home with a customized pool, designed to fit your lifestyle. At our pool construction company, we specialize in turning your dreams of relaxation and entertainment into a refreshing reality.",
+      "Get a Quote for Your Project Now!": "Get a Quote for Your Project Now!",
     },
   },
   es: {
@@ -86,6 +98,18 @@ const resources = {
       "Launch Time": "Tiempo de lanzamiento",
       "Some quick examples to build the card title and make up the bulk of the card's content.":
         "Algunos ejemplos rápidos para construir el título de la tarjeta y constituir la mayor parte del contenido de la tarjeta.",
+      "Want to Get a Quote with Us?": "¿Quieres Cotizar con nosotros?",
+      "Complete the form and we'll respond within 24 hours.":
+        "Completa el formulario y te responderemos en 24 horas.",
+      "Full Name": "Nombre completo",
+      "Email Address": "Correo electrónico",
+      Message: "Mensaje",
+      "Write a message...": "Escribe un mensaje...",
+      "Send Message": "Enviar Mensaje",
+      "Your story begins with us.": "Tu historia comienza con nosotros.",
+      "Imagine your home with a customized pool, designed to fit your lifestyle. At our pool construction company, we specialize in turning your dreams of relaxation and entertainment into a refreshing reality.":
+        "Imagina tu hogar con una piscina personalizada, diseñada para adaptarse a tu estilo de vida. En nuestra empresa constructora de piscinas, nos especializamos en convertir tus sueños de relajación y entretenimiento en una realidad refrescante.",
+      "Get a Quote for Your Project Now!": "¡Cotiza tu proyecto ahora!",
     },
   },
 };

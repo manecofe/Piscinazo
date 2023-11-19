@@ -56,11 +56,11 @@ function Landing() {
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div className="mx-auto flex flex-col">
                   <h1 className="text-white dark:text-slate-300 font-semibold text-5xl">
-                    {t("Tu historia comienza con nosotros.")}
+                    {t("Your story begins with us.")}
                   </h1>
                   <p className="mt-4 text-lg text-gray-300 dark:text-slate-300">
                     {t(
-                      "Imagina tu hogar con una piscina personalizada, diseñada para adaptarse a tu estilo de vida. En nuestra empresa constructora de piscinas, nos especializamos en convertir tus sueños de relajación y entretenimiento en una realidad refrescante."
+                      "Imagine your home with a customized pool, designed to fit your lifestyle. At our pool construction company, we specialize in turning your dreams of relaxation and entertainment into a refreshing reality."
                     )}
                   </p>
                   <a
@@ -71,7 +71,7 @@ function Landing() {
                     <div className="relative -left-20 w-0 h-0 bottom-4 text-5xl transition-all animate-pulse">
                       <FontAwesomeIcon icon={faHandPointRight} />
                     </div>
-                    {t("¡Cotiza tu proyecto ahora!")}
+                    {t("Get a Quote for Your Project Now!")}
                   </a>
                 </div>
               </div>
@@ -82,7 +82,7 @@ function Landing() {
                 >
                   <img
                     src={darkMode ? logoD : logo}
-                    alt={t("Descripción del SVG")}
+                    alt={t("Description of the SVG")}
                     className="w-full h-full"
                   />
                 </div>
@@ -110,6 +110,7 @@ function Landing() {
             </svg>
           </div>
         </div>
+
         <section className="pb-20 bg-fresh-green dark:bg-dark-green -mt-24">
           <div className="container mx-auto px-4 dark:text-slate-300">
             <div className="flex flex-wrap">
@@ -186,7 +187,7 @@ function Landing() {
               <div className="items-center md:mx-12 flex flex-wrap">
                 <div className="w-full lg:w-6/12 px-4 ml-auto">
                   <div className="md:pr-12 flex flex-col">
-                    <h1 className="font-semibold text-center md:text-left text-4xl md:text-5xl overflow-clip">
+                    <h1 className="font-semibold text-center md:text-left text-4xl md:text-5xl overflow-x-clip">
                       {t("Custom Design")}
                     </h1>
                     <p className="mt-4 text-lg text-center md:text-left">
@@ -218,7 +219,7 @@ function Landing() {
               <div className="items-center md:mx-12 flex flex-row-reverse flex-wrap">
                 <div className="w-full lg:w-6/12 px-4 ml-auto">
                   <div className="md:pr-12 flex flex-col">
-                    <h1 className="font-semibold text-center md:text-right text-4xl md:text-5xl overflow-clip">
+                    <h1 className="font-semibold text-center md:text-right text-4xl md:text-5xl overflow-x-clip">
                       {t("Pool Construction")}
                     </h1>
                     <p className="mt-4 text-lg text-center md:text-right">
@@ -250,7 +251,7 @@ function Landing() {
               <div className="items-center md:mx-12 flex flex-wrap">
                 <div className="w-full lg:w-6/12 px-4 ml-auto">
                   <div className="md:pr-12 flex flex-col">
-                    <h1 className="font-semibold text-center md:text-left text-4xl md:text-5xl overflow-clip">
+                    <h1 className="font-semibold text-center md:text-left text-4xl md:text-5xl overflow-x-clip">
                       {t("Pool Remodeling")}
                     </h1>
                     <p className="mt-4 text-center md:text-left text-lg">
