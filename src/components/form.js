@@ -26,7 +26,7 @@ const Form = () => {
       <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
         <div className="w-full lg:w-6/12 px-4">
           <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-            <div className="flex-auto p-5 lg:p-10">
+            <div className="flex-auto p-5 lg:p-10 text-center">
               <h4 className="text-2xl font-semibold">
                 ¿Quieres Cotizar con nosotros?
               </h4>
