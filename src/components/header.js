@@ -20,7 +20,7 @@ function Header() {
           href="#formulario"
           className="ml-auto flex items-center gap-x-1 rounded-md bg-white px-3 py-2 text-sm font-semibold text-neon-pink shadow-sm hover:bg-neon-pink hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
         >
-          Cotiza!
+          Cotiza con nosotros!
         </a>
       </div>
     </div>

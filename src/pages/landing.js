@@ -15,6 +15,7 @@ import {
   faSquarePollVertical,
   faLightbulb,
   faHandPointRight,
+  faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Form from "../components/form";
 import Header from "../components/header";
@@ -112,7 +113,7 @@ function Landing() {
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
-                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                    <div className="text-white text-3xl p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <FontAwesomeIcon icon={faBellConcierge} />
                     </div>
                     <h6 className="text-xl font-semibold">Exelente Servicio</h6>
@@ -128,7 +129,7 @@ function Landing() {
               <div className="w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
-                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
+                    <div className="text-white text-3xl p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
                       <FontAwesomeIcon icon={faHammer} />
                     </div>
                     <h6 className="text-xl font-semibold">
@@ -146,7 +147,7 @@ function Landing() {
               <div className="pt-6 w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
-                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
+                    <div className="text-white text-3xl p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
                       <FontAwesomeIcon icon={faPaintbrush} />
                     </div>
                     <h6 className="text-xl font-semibold">Diseños Modernos</h6>
@@ -287,14 +288,14 @@ function Landing() {
 
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
-              <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
+              <div className="w-full md:w-1/2 ml-auto mr-auto px-4">
                 <img
                   alt="Hormigas construyendo"
                   className="max-w-full rounded-lg shadow-lg"
                   src={hormigas}
                 />
               </div>
-              <div className="w-full mt-12 md:mt-0 md:w-5/12 ml-auto mr-auto px-4">
+              <div className="w-full mt-12 md:mt-0 md:w-1/2 ml-auto mr-auto px-4">
                 <div className="md:pr-12">
                   <h3 className="text-3xl text-center font-semibold">
                     Una empresa en crecimiento
@@ -302,16 +303,14 @@ function Landing() {
                   <p className="mt-4 text-lg text-center leading-relaxed text-gray-600">
                     Nuestra empresa de construcción de piscinas está en
                     constante crecimiento y comprometida con brindar los mejores
-                    servicios a nuestros clientes. Ofrecemos soluciones
-                    personalizadas para convertir tus sueños de tener una
-                    piscina en realidad.
+                    servicios a nuestros clientes.
                   </p>
                   <ul className="list-none mt-6">
                     <li className="py-2">
                       <div className="flex items-center">
                         <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
-                            <i className="fas fa-fingerprint"></i>
+                          <span className="text-2xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 mr-3">
+                            <FontAwesomeIcon icon={faAngleRight} />
                           </span>
                         </div>
                         <div>
@@ -324,8 +323,8 @@ function Landing() {
                     <li className="py-2">
                       <div className="flex items-center">
                         <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
-                            <i className="fab fa-html5"></i>
+                          <span className="text-2xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 mr-3">
+                            <FontAwesomeIcon icon={faAngleRight} />
                           </span>
                         </div>
                         <div>
@@ -338,8 +337,8 @@ function Landing() {
                     <li className="py-2">
                       <div className="flex items-center">
                         <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
-                            <i className="far fa-paper-plane"></i>
+                          <span className="text-2xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 mr-3">
+                            <FontAwesomeIcon icon={faAngleRight} />
                           </span>
                         </div>
                         <div>
@@ -357,7 +356,7 @@ function Landing() {
         </section>
 
         <section className="pt-20 pb-48 bg-pale-blue">
-          <div className="flex justify-center align-middle flex-col text-center">
+          <div className="flex justify-center md:w-1/2 mx-auto align-middle flex-col text-center">
             <h3 className="text-3xl mx-4 font-semibold">
               Nuestros proyectos Realizados
             </h3>
@@ -391,7 +390,7 @@ function Landing() {
             <img
               src={waves}
               alt="Descripción del SVG"
-              className="w-full h-full"
+              className="w-full h-full -my-1"
             />
           </div>
 
@@ -410,7 +409,7 @@ function Landing() {
             </div>
             <div className="flex flex-wrap mt-12 justify-center">
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-gray-700 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                <div className="text-gray-700 text-3xl p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                   <FontAwesomeIcon icon={faMedal} />
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
@@ -423,7 +422,7 @@ function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-gray-700 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                <div className="text-gray-700 text-3xl p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                   <FontAwesomeIcon icon={faSquarePollVertical} />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
@@ -436,7 +435,7 @@ function Landing() {
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-gray-700 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                <div className="text-gray-700 text-3xl p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                   <FontAwesomeIcon icon={faLightbulb} />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
