@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Piscinazo/static/css/main.c5990d67.css",
-    "main.js": "/Piscinazo/static/js/main.6fcd000e.js",
+    "main.css": "/Piscinazo/static/css/main.0908d6fe.css",
+    "main.js": "/Piscinazo/static/js/main.6ba42043.js",
     "static/js/787.a6392beb.chunk.js": "/Piscinazo/static/js/787.a6392beb.chunk.js",
     "static/media/pool-1.jpg": "/Piscinazo/static/media/pool-1.f5e9a42914dc84967f18.jpg",
     "static/media/piscina-moderna.jpg": "/Piscinazo/static/media/piscina-moderna.e9ac5714deaad9a0b88e.jpg",
@@ -14,12 +14,12 @@
     "static/media/layered-waves-dark.svg": "/Piscinazo/static/media/layered-waves-dark.9153766934a933e07cf9333530c21402.svg",
     "static/media/layered-waves.svg": "/Piscinazo/static/media/layered-waves.c58d8a6524fa467b03fa80de4edc1261.svg",
     "index.html": "/Piscinazo/index.html",
-    "main.c5990d67.css.map": "/Piscinazo/static/css/main.c5990d67.css.map",
-    "main.6fcd000e.js.map": "/Piscinazo/static/js/main.6fcd000e.js.map",
+    "main.0908d6fe.css.map": "/Piscinazo/static/css/main.0908d6fe.css.map",
+    "main.6ba42043.js.map": "/Piscinazo/static/js/main.6ba42043.js.map",
     "787.a6392beb.chunk.js.map": "/Piscinazo/static/js/787.a6392beb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5990d67.css",
-    "static/js/main.6fcd000e.js"
+    "static/css/main.0908d6fe.css",
+    "static/js/main.6ba42043.js"
   ]
 }
