@@ -38,9 +38,7 @@ function Testimonials() {
   useEffect(() => {
     const options = {
       duration: 300,
-      onCycleTo: () => {
-        console.log("New Slide");
-      },
+      onCycleTo: () => {},
     };
     const instance = M.Carousel.init(
       document.querySelector(".carousel"),
@@ -52,7 +50,7 @@ function Testimonials() {
   }, []);
 
   return (
-    <div className="carousel">
+    <div className="carousel overflow-x-hidden max-w-full -mt-16 md:mt-8 overflow-y-clip">
       {slides.map((slide, index) => (
         <div key={index} className="carousel-item mx-4">
           <img

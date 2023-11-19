@@ -5,7 +5,7 @@ function Header() {
         <h1 className="text-base font-semibold leading-7 text-white">
           Piscinazo
         </h1>
-        <div className="order-last flex w-full gap-x-8 text-sm font-semibold leading-6 sm:order-none sm:w-auto sm:border-l sm:border-gray-200 sm:pl-6 sm:leading-7">
+        <div className="order-last hidden md:flex w-full gap-x-8 text-sm font-semibold leading-6 sm:order-none sm:w-auto sm:border-l  sm:pl-6">
           <a href="#servicios" className="text-white">
             Servicios
           </a>

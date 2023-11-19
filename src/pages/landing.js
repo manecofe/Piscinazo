@@ -14,6 +14,7 @@ import {
   faMedal,
   faSquarePollVertical,
   faLightbulb,
+  faHandPointRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Form from "../components/form";
 import Header from "../components/header";
@@ -59,9 +60,12 @@ function Landing() {
                   </p>
                   <a
                     href="#asd"
-                    className="w-max mx-auto transition-colors mt-6 text-fresh-green hover:text-white border border-fresh-green hover:bg-fresh-green focus:ring-4 focus:outline-none focus:ring-fresh-green font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 "
+                    className="w-max mx-auto transition-colors mt-6 text-white hover:text-fresh-green border border-fresh-green hover:bg-transparent bg-fresh-green focus:ring-4 focus:outline-none focus:ring-fresh-green font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 "
                     onClick={scrollToForm}
                   >
+                    <div className="relative -left-20 w-0 h-0 bottom-4 text-5xl transition-all animate-pulse">
+                      <FontAwesomeIcon icon={faHandPointRight} />
+                    </div>
                     ¡Cotiza tu proyecto ahora!
                   </a>
                 </div>
@@ -169,13 +173,13 @@ function Landing() {
               </div>
             </div>
             <div className="mt-12 my-4">
-              <div className="items-center mx-12 flex flex-wrap">
+              <div className="items-center md:mx-12 flex flex-wrap">
                 <div className="w-full lg:w-6/12 px-4 ml-auto">
-                  <div className="pr-12 flex flex-col">
-                    <h1 className="font-semibold text-5xl">
+                  <div className="md:pr-12 flex flex-col">
+                    <h1 className="font-semibold text-center md:text-left text-4xl md:text-5xl overflow-clip">
                       Diseño Personalizado
                     </h1>
-                    <p className="mt-4 text-lg">
+                    <p className="mt-4 text-lg text-center md:text-left">
                       Imagina tu hogar con una piscina diseñada a medida,
                       reflejando tu estilo y adaptándose perfectamente a tu
                       vida. En nuestra empresa constructora de piscinas, nos
@@ -187,8 +191,7 @@ function Landing() {
                 <div className="w-full my-8 lg:w-6/12 px-4 ml-auto">
                   <img
                     alt="Diseño Personalizado"
-                    className="max-w-full mx-auto rounded-lg shadow-lg"
-                    style={{ height: "400px" }}
+                    className="max-w-full mx-auto h-[280px] md:h-[500px] rounded-lg shadow-lg"
                     src={diseño} // Reemplaza "URL_DE_LA_IMAGEN_1" con la URL de la imagen para Diseño Personalizado
                   />
                 </div>
@@ -203,13 +206,13 @@ function Landing() {
               </div>
             </div>
             <div className="mt-12 my-4">
-              <div className="items-center mx-12 flex flex-row-reverse flex-wrap">
+              <div className="items-center md:mx-12 flex flex-row-reverse flex-wrap">
                 <div className="w-full lg:w-6/12 px-4 ml-auto">
-                  <div className="pr-12 flex flex-col">
-                    <h1 className="font-semibold text-5xl">
+                  <div className="md:pr-12 flex flex-col">
+                    <h1 className="font-semibold text-center md:text-right text-4xl md:text-5xl overflow-clip">
                       Construcción de Piscinas
                     </h1>
-                    <p className="mt-4 text-lg">
+                    <p className="mt-4 text-lg text-center md:text-right">
                       Convierte tu espacio en un oasis con nuestra experta
                       construcción de piscinas. Nuestro equipo de ingenieros
                       calificados garantiza durabilidad y seguridad en cada
@@ -220,8 +223,7 @@ function Landing() {
                 <div className="w-full my-8 lg:w-6/12 px-4 ml-auto">
                   <img
                     alt="Construcción de Piscinas"
-                    className="max-w-full mx-auto rounded-lg shadow-lg"
-                    style={{ height: "400px" }}
+                    className="max-w-full mx-auto rounded-lg shadow-lg h-[280px] md:h-[500px]"
                     src={grua} // Reemplaza "URL_DE_LA_IMAGEN_2" con la URL de la imagen para Construcción de Piscinas
                   />
                 </div>
@@ -236,13 +238,13 @@ function Landing() {
               </div>
             </div>
             <div className="mt-12 my-4">
-              <div className="items-center mx-12 flex flex-wrap">
+              <div className="items-center md:mx-12 flex flex-wrap">
                 <div className="w-full lg:w-6/12 px-4 ml-auto">
-                  <div className="pr-12 flex flex-col">
-                    <h1 className="font-semibold text-5xl">
+                  <div className="md:pr-12 flex flex-col">
+                    <h1 className="font-semibold text-center md:text-left text-4xl md:text-5xl overflow-clip">
                       Remodelación de Piscinas
                     </h1>
-                    <p className="mt-4 text-lg">
+                    <p className="mt-4 text-center md:text-left text-lg">
                       Transformamos tu piscina existente en una joya moderna y
                       funcional. Desde actualizaciones estéticas hasta mejoras
                       tecnológicas, hacemos que tu piscina se adapte a tus
@@ -253,8 +255,7 @@ function Landing() {
                 <div className="w-full my-8 lg:w-6/12 px-4 ml-auto">
                   <img
                     alt="Remodelación de Piscinas"
-                    className="max-w-full mx-auto rounded-lg shadow-lg"
-                    style={{ height: "400px" }}
+                    className="max-w-full mx-auto rounded-lg shadow-lg h-[280px] md:h-[500px]"
                     src={moderno} // Reemplaza "URL_DE_LA_IMAGEN_3" con la URL de la imagen para Remodelación de Piscinas
                   />
                 </div>
@@ -293,12 +294,12 @@ function Landing() {
                   src={hormigas}
                 />
               </div>
-              <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
+              <div className="w-full mt-12 md:mt-0 md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-12">
-                  <h3 className="text-3xl font-semibold">
+                  <h3 className="text-3xl text-center font-semibold">
                     Una empresa en crecimiento
                   </h3>
-                  <p className="mt-4 text-lg leading-relaxed text-gray-600">
+                  <p className="mt-4 text-lg text-center leading-relaxed text-gray-600">
                     Nuestra empresa de construcción de piscinas está en
                     constante crecimiento y comprometida con brindar los mejores
                     servicios a nuestros clientes. Ofrecemos soluciones
@@ -357,10 +358,10 @@ function Landing() {
 
         <section className="pt-20 pb-48 bg-pale-blue">
           <div className="flex justify-center align-middle flex-col text-center">
-            <h3 className="text-3xl font-semibold">
+            <h3 className="text-3xl mx-4 font-semibold">
               Nuestros proyectos Realizados
             </h3>
-            <p className="mt-4 text-lg leading-relaxed text-gray-600">
+            <p className="m-4  text-lg leading-relaxed text-gray-600">
               Nuestra empresa de construcción de piscinas está en constante
               crecimiento y comprometida con brindar los mejores servicios a
               nuestros clientes.
@@ -368,12 +369,12 @@ function Landing() {
           </div>
 
           <Carousel />
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-24 mt-12 px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-4 md:mx-24 mt-12 px-4">
             <div className="md:col-span-1 my-auto">
-              <h2 className="text-4xl font-semibold">
+              <h2 className="text-4xl font-semibold text-center">
                 Lo que dicen nuestros clientes
               </h2>
-              <p className="text-lg leading-relaxed m-4 text-gray-600">
+              <p className="text-lg text-center leading-relaxed m-4 text-gray-600">
                 Descubre las experiencias de nuestros clientes satisfechos que
                 han elegido nuestros servicios de construcción de piscinas. Aquí
                 tienes algunos testimonios sobre sus experiencias con nosotros.
