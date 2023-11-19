@@ -1,5 +1,3 @@
-import logo from "../assets/img/Logo-Piscinazo.png";
-
 const navigation = {
   solutions: [
     { name: "Marketing", href: "#" },
@@ -27,9 +25,14 @@ const navigation = {
   ],
 };
 
+// ... (importaciones y código anterior)
+
 function Footer() {
   return (
-    <footer className="bg-neon-pink" aria-labelledby="footer-heading">
+    <footer
+      className="bg-neon-pink dark:bg-dark-pink"
+      aria-labelledby="footer-heading"
+    >
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -41,7 +44,7 @@ function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-white">
                   Solutions
                 </h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul className="mt-6 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
                       <a
@@ -58,7 +61,7 @@ function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-white">
                   Support
                 </h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
                       <a
@@ -77,7 +80,7 @@ function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-white">
                   Company
                 </h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
                       <a
@@ -94,7 +97,7 @@ function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-white">
                   Legal
                 </h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
                       <a

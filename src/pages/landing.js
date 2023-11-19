@@ -1,5 +1,7 @@
 import waves from "../assets/svg/layered-waves.svg";
+import wavesD from "../assets/svg/layered-waves-dark.svg";
 import logo from "../assets/img/Logo-Piscinazo.png";
+import logoD from "../assets/img/Logo-Piscinazo-dark.png";
 import diseño from "../assets/img/constructor.jpg";
 import grua from "../assets/img/grua.jpg";
 import hormigas from "../assets/img/ants.jpg";
@@ -7,6 +9,7 @@ import moderno from "../assets/img/piscina-moderna.jpg";
 import Carousel from "../components/carousel";
 import Testimonials from "../components/testimonials";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTheme } from "../contexts/mainContext";
 import {
   faBellConcierge,
   faHammer,
@@ -20,6 +23,7 @@ import {
 import Form from "../components/form";
 import Header from "../components/header";
 import Footer from "../components/footer";
+//import { useTheme } from "../contexts/mainContext";
 const BackImage = require("../assets/img/pool-1.jpg");
 const scrollToForm = () => {
   const formSection = document.getElementById("formulario");
@@ -27,6 +31,7 @@ const scrollToForm = () => {
 };
 
 function Landing() {
+  const { darkMode } = useTheme();
   return (
     <>
       <Header />
@@ -43,16 +48,16 @@ function Landing() {
               backgroundImage: `url(${BackImage})`,
             }}
           >
-            <span className="w-full h-full absolute opacity-50 bg-black"></span>
+            <span className="w-full h-full absolute opacity-50 bg-black dark:opacity-70"></span>
           </div>
           <div className="container relative mx-auto">
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div className="mx-auto flex flex-col">
-                  <h1 className="text-white font-semibold text-5xl">
+                  <h1 className="text-white dark:text-slate-300 font-semibold text-5xl">
                     Tu historia comienza con nosotros.
                   </h1>
-                  <p className="mt-4 text-lg text-gray-300">
+                  <p className="mt-4 text-lg text-gray-300 dark:text-slate-300">
                     Imagina tu hogar con una piscina personalizada, diseñada
                     para adaptarse a tu estilo de vida. En nuestra empresa
                     constructora de piscinas, nos especializamos en convertir
@@ -61,7 +66,7 @@ function Landing() {
                   </p>
                   <a
                     href="#asd"
-                    className="w-max mx-auto transition-colors mt-6 text-white hover:text-fresh-green border border-fresh-green hover:bg-transparent bg-fresh-green focus:ring-4 focus:outline-none focus:ring-fresh-green font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 "
+                    className="w-max mx-auto transition-colors mt-6 text-white dark:text-slate-300 hover:text-fresh-green border border-fresh-green  hover:bg-transparent bg-fresh-green dark:bg-dark-green focus:ring-4 focus:outline-none focus:ring-fresh-green dark:focus:ring-dark-green font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 "
                     onClick={scrollToForm}
                   >
                     <div className="relative -left-20 w-0 h-0 bottom-4 text-5xl transition-all animate-pulse">
@@ -77,7 +82,7 @@ function Landing() {
                   onDragStart={(e) => e.preventDefault()}
                 >
                   <img
-                    src={logo} // Asegúrate de tener la variable 'logo' definida
+                    src={darkMode ? logoD : logo} // Asegúrate de tener la variable 'logo' definida
                     alt="Descripción del SVG"
                     className="w-full h-full"
                   />
@@ -100,23 +105,25 @@ function Landing() {
               y="0"
             >
               <polygon
-                className="text-fresh-green fill-current"
+                className="text-fresh-green dark:text-dark-green fill-current"
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>
           </div>
         </div>
 
-        <section className="pb-20 bg-fresh-green -mt-24">
-          <div className="container mx-auto px-4">
+        <section className="pb-20 bg-fresh-green dark:bg-dark-green -mt-24">
+          <div className="container mx-auto px-4 dark:text-slate-300">
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div className="relative flex flex-col min-w-0 break-words bg-white dark:bg-slate-300 w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
-                    <div className="text-white text-3xl p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                    <div className=" text-white dark:text-slate-300 text-3xl p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <FontAwesomeIcon icon={faBellConcierge} />
                     </div>
-                    <h6 className="text-xl font-semibold">Exelente Servicio</h6>
+                    <h6 className="text-xl font-semibold dark:text-slate-800">
+                      Exelente Servicio
+                    </h6>
                     <p className="mt-2 mb-4 text-gray-600">
                       Destacados por nuestro excepcional servicio de
                       construcción de piscinas, ofrecemos una experiencia única
@@ -127,12 +134,12 @@ function Landing() {
               </div>
 
               <div className="w-full md:w-4/12 px-4 text-center">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div className="relative flex flex-col min-w-0 break-words bg-white dark:bg-slate-300 w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
-                    <div className="text-white text-3xl p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
+                    <div className="text-white dark:text-slate-300 text-3xl p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
                       <FontAwesomeIcon icon={faHammer} />
                     </div>
-                    <h6 className="text-xl font-semibold">
+                    <h6 className="text-xl font-semibold dark:text-slate-800">
                       Ingenieros Calificados
                     </h6>
                     <p className="mt-2 mb-4 text-gray-600">
@@ -145,12 +152,14 @@ function Landing() {
               </div>
 
               <div className="pt-6 w-full md:w-4/12 px-4 text-center">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                  <div className="px-4 py-5 flex-auto">
-                    <div className="text-white text-3xl p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
+                <div className="relative flex flex-col min-w-0 break-words bg-white dark:bg-slate-300 w-full mb-8 shadow-lg rounded-lg">
+                  <div className="px-4 py-5 flex-auto ">
+                    <div className="text-white dark:text-slate-300 text-3xl p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
                       <FontAwesomeIcon icon={faPaintbrush} />
                     </div>
-                    <h6 className="text-xl font-semibold">Diseños Modernos</h6>
+                    <h6 className="text-xl font-semibold dark:text-slate-800">
+                      Diseños Modernos
+                    </h6>
                     <p className="mt-2 mb-4 text-gray-600">
                       Nos enorgullece ofrecer diseños modernos que combinan la
                       estética contemporánea con la funcionalidad, creando
@@ -170,7 +179,7 @@ function Landing() {
                 className="absolute inset-0 flex items-center"
                 aria-hidden="true"
               >
-                <div className="w-full border-t border-green-600" />
+                <div className="w-full border-t border-green-600 dark:border-green-800" />
               </div>
             </div>
             <div className="mt-12 my-4">
@@ -203,7 +212,7 @@ function Landing() {
                 className="absolute inset-0 flex items-center"
                 aria-hidden="true"
               >
-                <div className="w-full border-t border-green-600" />
+                <div className="w-full border-t border-green-600 dark:border-green-800" />
               </div>
             </div>
             <div className="mt-12 my-4">
@@ -235,7 +244,7 @@ function Landing() {
                 className="absolute inset-0 flex items-center"
                 aria-hidden="true"
               >
-                <div className="w-full border-t border-green-600" />
+                <div className="w-full border-t border-green-600 dark:border-green-800" />
               </div>
             </div>
             <div className="mt-12 my-4">
@@ -265,7 +274,7 @@ function Landing() {
           </div>
         </section>
 
-        <section className="relative py-20 bg-pale-blue">
+        <section className="relative py-20 bg-pale-blue dark:bg-dark-cyan dark:text-slate-300">
           <div
             className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
             style={{ height: "80px" }}
@@ -280,7 +289,7 @@ function Landing() {
               y="0"
             >
               <polygon
-                className="text-pale-blue fill-current"
+                className="text-pale-blue dark:text-dark-cyan fill-current"
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>
@@ -300,7 +309,7 @@ function Landing() {
                   <h3 className="text-3xl text-center font-semibold">
                     Una empresa en crecimiento
                   </h3>
-                  <p className="mt-4 text-lg text-center leading-relaxed text-gray-600">
+                  <p className="mt-4 text-lg text-center leading-relaxed dark:text-slate-300 text-gray-600">
                     Nuestra empresa de construcción de piscinas está en
                     constante crecimiento y comprometida con brindar los mejores
                     servicios a nuestros clientes.
@@ -314,7 +323,7 @@ function Landing() {
                           </span>
                         </div>
                         <div>
-                          <h4 className="text-gray-600">
+                          <h4 className="text-gray-600 dark:text-slate-300">
                             Componentes cuidadosamente diseñados
                           </h4>
                         </div>
@@ -328,7 +337,7 @@ function Landing() {
                           </span>
                         </div>
                         <div>
-                          <h4 className="text-gray-600">
+                          <h4 className="text-gray-600 dark:text-slate-300">
                             Increíbles ejemplos de páginas
                           </h4>
                         </div>
@@ -342,7 +351,7 @@ function Landing() {
                           </span>
                         </div>
                         <div>
-                          <h4 className="text-gray-600">
+                          <h4 className="text-gray-600 dark:text-slate-300">
                             Componentes dinámicos
                           </h4>
                         </div>
@@ -355,12 +364,12 @@ function Landing() {
           </div>
         </section>
 
-        <section className="pt-20 pb-48 bg-pale-blue">
+        <section className="pt-20 pb-48 dark:text-slate-300 bg-pale-blue dark:bg-dark-cyan">
           <div className="flex justify-center md:w-1/2 mx-auto align-middle flex-col text-center">
             <h3 className="text-3xl mx-4 font-semibold">
               Nuestros proyectos Realizados
             </h3>
-            <p className="m-4  text-lg leading-relaxed text-gray-600">
+            <p className="m-4  text-lg leading-relaxed text-gray-600 dark:text-slate-300">
               Nuestra empresa de construcción de piscinas está en constante
               crecimiento y comprometida con brindar los mejores servicios a
               nuestros clientes.
@@ -373,7 +382,7 @@ function Landing() {
               <h2 className="text-4xl font-semibold text-center">
                 Lo que dicen nuestros clientes
               </h2>
-              <p className="text-lg text-center leading-relaxed m-4 text-gray-600">
+              <p className="text-lg text-center leading-relaxed m-4 text-gray-600 dark:text-slate-300">
                 Descubre las experiencias de nuestros clientes satisfechos que
                 han elegido nuestros servicios de construcción de piscinas. Aquí
                 tienes algunos testimonios sobre sus experiencias con nosotros.
@@ -385,10 +394,10 @@ function Landing() {
           </div>
         </section>
 
-        <section className="pb-20 relative block bg-neon-pink">
+        <section className="pb-20 relative block bg-neon-pink dark:bg-dark-pink">
           <div className="select-none" onDragStart={(e) => e.preventDefault()}>
             <img
-              src={waves}
+              src={darkMode ? wavesD : waves}
               alt="Descripción del SVG"
               className="w-full h-full -my-1"
             />
@@ -452,7 +461,7 @@ function Landing() {
         </section>
         <section
           id="formulario"
-          className="relative block py-24 lg:pt-0 bg-neon-pink"
+          className="relative block py-24 lg:pt-0 bg-neon-pink dark:bg-dark-pink"
         >
           <Form />
         </section>

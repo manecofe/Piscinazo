@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Landing from "../pages/landing";
-
+import { MainProvider } from "../contexts/mainContext";
 const router = createBrowserRouter([
   {
     path: "*",
@@ -15,9 +15,9 @@ const router = createBrowserRouter([
 
 function Mainroute() {
   return (
-    <>
+    <MainProvider>
       <RouterProvider router={router} />
-    </>
+    </MainProvider>
   );
 }
 

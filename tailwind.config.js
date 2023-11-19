@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{html,js,jsx,ts}"],
   theme: {
     extend: {
@@ -11,6 +12,16 @@ module.exports = {
         "neon-pink": "#C62368",
 
         "pale-blue": "#bde3ff",
+
+        //######################################
+
+        "forest-green": "#003732",
+
+        "dark-green": "#1c4a26",
+
+        "dark-pink": "#520972",
+
+        "dark-cyan": "#1a7d82",
       },
     },
   },

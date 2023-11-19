@@ -52,13 +52,16 @@ function Testimonials() {
   return (
     <div className="carousel overflow-x-hidden max-w-full -mt-16 md:mt-8 overflow-y-clip">
       {slides.map((slide, index) => (
-        <div key={index} className="carousel-item mx-4">
+        <div
+          key={index}
+          className=" text-white dark:text-slate-300 carousel-item mx-4"
+        >
           <img
             alt={`Slide ${index + 1}`}
             className="rounded-t-lg shadow-lg"
             src={slide.url}
           />
-          <div className="bg-neon-pink rounded-b-lg p-6">
+          <div className="bg-neon-pink dark:bg-dark-pink rounded-b-lg p-6">
             <div
               style={{
                 backgroundImage: `url(${BackImage})`,
@@ -66,10 +69,10 @@ function Testimonials() {
               className="bg-blue-300 bg-cover w-16 h-16 rounded-full absolute top-24 -right-2"
             ></div>
 
-            <h1 className="select-none text-white font-bold text-lg mb-4">
+            <h1 className="select-none  font-bold text-lg mb-4">
               {slide.title}
             </h1>
-            <p className="select-none text-white">{slide.content}</p>
+            <p className="select-none ">{slide.content}</p>
           </div>
         </div>
       ))}
