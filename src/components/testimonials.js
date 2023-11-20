@@ -29,7 +29,7 @@ function Testimonials() {
         const textSlides = textResponse.data.map((post, index) => ({
           url: picsumSlides[index].url,
           title: `Testimonio ${index + 1}`,
-          content: truncateText(post.body, 50), // Limitar a 100 caracteres
+          content: truncateText(post.body, 50),
         }));
 
         setSlides(textSlides);
@@ -48,7 +48,6 @@ function Testimonials() {
     fetchData();
   }, []);
   useEffect(() => {
-    // Inicialización manual del Carousel después de renderizar
     try {
       const carouselElement = document.querySelector(".carousel");
       if (

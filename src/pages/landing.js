@@ -10,7 +10,6 @@ import Carousel from "../components/carousel";
 import Testimonials from "../components/testimonials";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTheme } from "../contexts/mainContext";
-import { useInView } from "react-intersection-observer";
 import {
   faBellConcierge,
   faHammer,
