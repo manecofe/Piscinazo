@@ -33,19 +33,6 @@ function Testimonials() {
         }));
 
         setSlides(textSlides);
-
-        const options = {
-          duration: 300,
-          onCycleTo: () => {},
-        };
-        const instance = M.Carousel.init(
-          document.querySelector(".carousel"),
-          options
-        );
-
-        return () => {
-          instance.destroy();
-        };
       } catch (error) {
         console.error("Error al obtener datos ficticios:", error);
       }
@@ -60,6 +47,29 @@ function Testimonials() {
 
     fetchData();
   }, []);
+  useEffect(() => {
+    // Inicialización manual del Carousel después de renderizar
+    try {
+      const carouselElement = document.querySelector(".carousel");
+      if (
+        carouselElement &&
+        M.Carousel &&
+        typeof M.Carousel.init === "function"
+      ) {
+        const options = {
+          duration: 300,
+          onCycleTo: () => {},
+        };
+        M.Carousel.init(carouselElement, options);
+      } else {
+        console.warn(
+          "Elemento del Carousel no encontrado o función init no disponible."
+        );
+      }
+    } catch (error) {
+      console.log("Error al inicializar el Carousel:", error);
+    }
+  }, [slides]);
 
   return (
     <div className="carousel overflow-x-hidden max-w-full -mt-16 md:mt-8 overflow-y-clip">
