@@ -10,6 +10,7 @@ import Carousel from "../components/carousel";
 import Testimonials from "../components/testimonials";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTheme } from "../contexts/mainContext";
+import { useInView } from "react-intersection-observer";
 import {
   faBellConcierge,
   faHammer,
@@ -24,6 +25,7 @@ import { useTranslation } from "react-i18next";
 import Form from "../components/form";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import FadeInImage from "../components/fadeinimage";
 const BackImage = require("../assets/img/pool-1.jpg");
 const scrollToForm = () => {
   const formSection = document.getElementById("formulario");
@@ -197,12 +199,14 @@ function Landing() {
                     </p>
                   </div>
                 </div>
-                <div className="w-full my-8 lg:w-6/12 px-4 ml-auto">
-                  <img
-                    alt={t("Custom Design")}
-                    className="max-w-full mx-auto h-[280px] md:h-[500px] rounded-lg shadow-lg"
-                    src={diseño}
-                  />
+                <div className="w-full my-8 flex justify-center lg:w-6/12 px-4 ml-auto">
+                  <div className="h-[280px] rounded-lg md:h-[500px] w-[280px] md:w-[500px]">
+                    <FadeInImage
+                      src={diseño}
+                      alt="teste"
+                      className="h-[280px] md:h-[500px] w-[280px] md:w-[500px] rounded-lg overflow-hidden"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -229,12 +233,14 @@ function Landing() {
                     </p>
                   </div>
                 </div>
-                <div className="w-full my-8 lg:w-6/12 px-4 ml-auto">
-                  <img
-                    alt={t("Pool Construction")}
-                    className="max-w-full mx-auto rounded-lg shadow-lg h-[280px] md:h-[500px]"
-                    src={grua}
-                  />
+                <div className="w-full my-8 flex justify-center lg:w-6/12 px-4 ml-auto">
+                  <div className="h-[280px] rounded-lg md:h-[500px] w-[280px] md:w-[500px]">
+                    <FadeInImage
+                      src={grua}
+                      alt="teste"
+                      className="h-[280px] md:h-[500px] w-[280px] md:w-[500px] rounded-lg overflow-hidden"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -261,12 +267,14 @@ function Landing() {
                     </p>
                   </div>
                 </div>
-                <div className="w-full my-8 lg:w-6/12 px-4 ml-auto">
-                  <img
-                    alt={t("Pool Remodeling")}
-                    className="max-w-full mx-auto rounded-lg shadow-lg h-[280px] md:h-[500px]"
-                    src={moderno}
-                  />
+                <div className="w-full my-8 flex justify-center lg:w-6/12 px-4 ml-auto">
+                  <div className="h-[280px] rounded-lg md:h-[500px] w-[280px] md:w-[500px]">
+                    <FadeInImage
+                      src={moderno}
+                      alt="teste"
+                      className="h-[280px] md:h-[500px] w-[280px] md:w-[500px] rounded-lg overflow-hidden"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -377,9 +385,9 @@ function Landing() {
 
           <Carousel />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-4 md:mx-24 mt-12 px-4">
-            <div className="md:col-span-1 my-auto">
-              <h2 className="text-4xl font-semibold text-center">
+          <div className="grid mx-auto grid-cols-1 lg:grid-cols-2 gap-8  md:mx-24 mt-12 px-4">
+            <div className="md:col-span-1 md:mx-24 my-auto">
+              <h2 className="text-4xl  font-semibold text-center">
                 {t("What Our Clients Say")}
               </h2>
               <p className="text-lg text-center leading-relaxed m-4 text-gray-600 dark:text-slate-300">

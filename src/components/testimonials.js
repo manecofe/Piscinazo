@@ -1,52 +1,64 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import M from "materialize-css";
+import axios from "axios";
 import "./car.css";
 import BackImage from "../assets/img/avatar.png";
+
 function Testimonials() {
-  const slides = [
-    {
-      url: "https://cdn.pixabay.com/photo/2020/04/17/12/28/pool-5055009_960_720.jpg",
-      title: "Testimonio 1",
-      content:
-        "Este es un testimonio sobre la empresa de construcción de piscinas.",
-    },
-    {
-      url: "https://cdn.pixabay.com/photo/2017/05/31/10/23/manor-house-2359884_1280.jpg",
-      title: "Testimonio 2",
-      content:
-        "Otro cliente satisfecho comparte su experiencia. Nulla facilisi.",
-    },
-    {
-      url: "https://cdn.pixabay.com/photo/2014/07/10/17/17/swimming-pool-389267_960_720.jpg",
-      title: "Testimonio 3",
-      content: "Un tercer cliente comparte sus pensamientos sobre el servicio.",
-    },
-    {
-      url: "https://cdn.pixabay.com/photo/2016/10/13/09/10/swimming-pool-1737173_960_720.jpg",
-      title: "Testimonio 4",
-      content:
-        "Otro testimonio positivo que destaca la calidad del trabajo realizado.",
-    },
-    {
-      url: "https://cdn.pixabay.com/photo/2016/10/06/16/35/summer-1719401_1280.jpg",
-      title: "Testimonio 5",
-      content:
-        "El último cliente elogia la profesionalidad y la eficiencia del equipo de construcción.",
-    },
-  ];
+  const [slides, setSlides] = useState([]);
 
   useEffect(() => {
-    const options = {
-      duration: 300,
-      onCycleTo: () => {},
+    const fetchData = async () => {
+      try {
+        // Obtener datos de Lorem Picsum para todas las imágenes
+        const picsumResponse = await axios.get(
+          "https://picsum.photos/v2/list?page=1&limit=5"
+        );
+
+        const picsumSlides = picsumResponse.data.map((image, index) => ({
+          url: image.download_url,
+          title: `Testimonio ${index + 1}`,
+          content: "Texto de ejemplo para el testimonio.",
+        }));
+
+        // Obtener datos de demostración de texto con jsonplaceholder
+        const textResponse = await axios.get(
+          "https://jsonplaceholder.typicode.com/posts?_limit=5"
+        );
+
+        const textSlides = textResponse.data.map((post, index) => ({
+          url: picsumSlides[index].url,
+          title: `Testimonio ${index + 1}`,
+          content: truncateText(post.body, 50), // Limitar a 100 caracteres
+        }));
+
+        setSlides(textSlides);
+
+        const options = {
+          duration: 300,
+          onCycleTo: () => {},
+        };
+        const instance = M.Carousel.init(
+          document.querySelector(".carousel"),
+          options
+        );
+
+        return () => {
+          instance.destroy();
+        };
+      } catch (error) {
+        console.error("Error al obtener datos ficticios:", error);
+      }
     };
-    const instance = M.Carousel.init(
-      document.querySelector(".carousel"),
-      options
-    );
-    return () => {
-      instance.destroy();
+
+    // Función para truncar el texto a una longitud específica
+    const truncateText = (text, maxLength) => {
+      return text.length > maxLength
+        ? text.substring(0, maxLength - 3) + "..."
+        : text;
     };
+
+    fetchData();
   }, []);
 
   return (
@@ -54,7 +66,7 @@ function Testimonials() {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className=" text-white dark:text-slate-300 carousel-item mx-4"
+          className="text-white dark:text-slate-300 carousel-item mx-4"
         >
           <img
             alt={`Slide ${index + 1}`}
@@ -69,10 +81,10 @@ function Testimonials() {
               className="bg-blue-300 bg-cover w-16 h-16 rounded-full absolute top-24 -right-2"
             ></div>
 
-            <h1 className="select-none  font-bold text-lg mb-4">
+            <h1 className="select-none font-bold text-lg mb-4">
               {slide.title}
             </h1>
-            <p className="select-none ">{slide.content}</p>
+            <p className="select-none">{slide.content}</p>
           </div>
         </div>
       ))}
