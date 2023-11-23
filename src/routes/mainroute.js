@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Landing from "../pages/landing";
 import { MainProvider } from "../contexts/mainContext";
+import Teste from "../components/teste";
 const router = createBrowserRouter([
   {
     path: "*",
-    element: <Landing />,
+    element: <Teste />,
   },
   /** LEER ANTES. asi es, esta es una muy mala practica
    * pero la verda me molesto mucho la imcompatibilidad
