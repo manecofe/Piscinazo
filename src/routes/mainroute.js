@@ -5,7 +5,7 @@ import Teste from "../components/teste";
 const router = createBrowserRouter([
   {
     path: "*",
-    element: <Teste />,
+    element: <Landing />,
   },
   /** LEER ANTES. asi es, esta es una muy mala practica
    * pero la verda me molesto mucho la imcompatibilidad
